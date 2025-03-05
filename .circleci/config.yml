@@ -1,0 +1,15 @@
+# This config was automatically generated from your source code
+# Stacks detected: deps:node:.
+version: 2.1
+
+jobs:
+  hello-world-job:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - run: echo "Hello, World!"
+
+workflows:
+  hello-world-workflow:
+    jobs:
+      - hello-world-job
